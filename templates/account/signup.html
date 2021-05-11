@@ -34,11 +34,11 @@ Sign Up
                     {% if form.errors %}
                     {% for field in form %}
                     {% for error in field.errors %}
-                    <strong>{{ error|escape }}</strong><br><br>
+                    <strong>{{ error|escape }}</strong><br>
                     {% endfor %}
                     {% endfor %}
                     {% for error in form.non_field_errors %}
-                    <strong>{{ error|escape }}</strong><br><br>
+                    <strong>{{ error|escape }}</strong><br>
                     {% endfor %}
                     {% endif %}
                     <button class="signupbutton" type="submit">{% trans "Sign Up" %}</button>
@@ -47,10 +47,11 @@ Sign Up
                 </div>
 
             </form>
-            <a href="{% provider_login_url 'google' %}"><button class="googlebutton">Sign Up with Google</button></a>
+            <a href="{% provider_login_url 'google' %}"><button class="googlebutton"><i class="fa fa-google fa-x"
+                aria-hidden="true"></i> Sign Up With Google</button></a>
 
         </div>
-        <div class="h-100 hidden-sm col-xl-4 img-block mw-100" style="background-image : url('{% static "mainapp/png/BookSignIn.png" %}')">
+        <div class="h-100 hidden-sm col-xl-4 img-block mw-100" style="background-image : url('{% static "mainapp/png/BookSignIn.webp" %}')">
             <a class="btn-bot" href="{% url 'account_login' %}">SIGN IN</a>
         </div>
     </div>
